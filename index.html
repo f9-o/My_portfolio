@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Faisal Al-numani | f9-o</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Outfit:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body class="dark-theme">
+    <div id="app">
+      <!-- Decoration Background -->
+      <div class="bg-glow bg-glow-1"></div>
+      <div class="bg-glow bg-glow-2"></div>
+
+      <!-- Navigation -->
+      <nav class="glass-nav">
+        <div class="logo">f9-o</div>
+        <ul class="nav-links">
+          <li><a href="#about">عني</a></li>
+          <li><a href="#projects">مشاريعي</a></li>
+          <li><a href="#tools">أدواتي</a></li>
+          <li><a href="#github">GitHub</a></li>
+        </ul>
+      </nav>
+
+      <!-- Hero Section -->
+      <section id="about" class="hero-section">
+        <div class="hero-content">
+          <div class="profile-container">
+            <div class="profile-glow"></div>
+            <img
+              id="profile-img"
+              src=""
+              alt="Faisal Al-numani"
+              class="profile-img skeleton"
+            />
+          </div>
+          <h1 class="glitch-text" data-text="Faisal Al-numani">
+            Faisal Al-numani
+          </h1>
+          <p class="subtitle">Software Engineer | Full Stack Developer</p>
+          <div class="social-links">
+            <a href="https://github.com/f9-o" target="_blank" class="social-btn"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a href="https://x.com/if9s0" target="_blank" class="social-btn"
+              ><i class="fab fa-x-twitter"></i
+            ></a>
+            <a
+              href="https://instagram.com/92n_"
+              target="_blank"
+              class="social-btn"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/faisal-f-alnumani-7a165b368"
+              target="_blank"
+              class="social-btn"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Projects -->
+      <section id="projects" class="section-container">
+        <h2 class="section-title"><span>Featured</span> Projects</h2>
+        <div class="projects-grid">
+          <!-- Manually Added Projects -->
+          <a
+            href="https://nppcs-system.onrender.com"
+            target="_blank"
+            class="project-card glass-card"
+          >
+            <div class="card-icon"><i class="fas fa-network-wired"></i></div>
+            <h3>NPPCS System</h3>
+            <p>نظام NPPCS المتطور</p>
+            <div class="tech-stack"><span>Web</span><span>System</span></div>
+          </a>
+
+          <a
+            href="https://occupybed-ai.streamlit.app/"
+            target="_blank"
+            class="project-card glass-card"
+          >
+            <div class="card-icon"><i class="fas fa-bed-pulse"></i></div>
+            <h3>OccupyBed AI</h3>
+            <p>نظام ذكاء اصطناعي لإشغال الأسرة</p>
+            <div class="tech-stack"><span>AI</span><span>Streamlit</span></div>
+          </a>
+
+          <a
+            href="https://sap-project.streamlit.app/"
+            target="_blank"
+            class="project-card glass-card highlight-card"
+          >
+            <div class="card-icon"><i class="fas fa-graduation-cap"></i></div>
+            <h3>SAP Project (Graduation)</h3>
+            <p>مشروع التخرج المتميز</p>
+            <div class="tech-stack">
+              <span>Graduation</span><span>Research</span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- Tools Section -->
+      <section id="tools" class="section-container">
+        <h2 class="section-title"><span>My</span> Tools</h2>
+        <div class="tools-showcase">
+          <a
+            href="https://f9-tools.netlify.app/"
+            target="_blank"
+            class="tool-card glass-card"
+          >
+            <div class="content">
+              <h3>f9-tools</h3>
+              <p>موقعي للأدوات التقنية - مجموعة أدوات للمطورين</p>
+            </div>
+            <div class="action-arrow"><i class="fas fa-arrow-left"></i></div>
+          </a>
+        </div>
+      </section>
+
+      <!-- GitHub Repos Section (Dynamic) -->
+      <section id="github" class="section-container">
+        <h2 class="section-title"><span>Latest</span> Code</h2>
+        <div id="repos-grid" class="repos-grid">
+          <!-- Populated by JS -->
+          <div class="loading-spinner">Loading from GitHub...</div>
+        </div>
+      </section>
+
+      <footer>
+        <p>© 2026 Faisal Al-numani. All rights reserved.</p>
+      </footer>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
