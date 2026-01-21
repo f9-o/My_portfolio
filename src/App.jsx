@@ -1,31 +1,37 @@
-import { useState, useEffect } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
-import BootSequence from './components/BootSequence';
+import React from 'react';
 import MainLayout from './components/MainLayout';
 import Cursor from './components/Cursor';
 import './index.css';
 
-function App() {
-  const [booted, setBooted] = useState(false);
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false, error: null };
+  }
 
+  static getDerivedStateFromError(error) {
+    return { hasError: true, error };
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className="p-10 text-red-500">
+          <h1>Something went wrong.</h1>
+          <pre>{this.state.error.toString()}</pre>
+        </div>
+      );
+    }
+    return this.props.children;
+  }
+}
+
+function App() {
   return (
-    <>
+    <ErrorBoundary>
       <Cursor />
-      <AnimatePresence mode="wait">
-        {!booted ? (
-          <BootSequence onComplete={() => setBooted(true)} />
-        ) : (
-          <motion.div 
-            key="main"
-            initial={{ opacity: 0 }} 
-            animate={{ opacity: 1 }} 
-            transition={{ duration: 0.5 }}
-          >
-            <MainLayout />
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </>
+      <MainLayout />
+    </ErrorBoundary>
   );
 }
 

@@ -20,45 +20,39 @@ const LiveBackground = () => {
              />
         </div>
 
-        {/* Ambient Glow Orbs */}
+        {/* Ambient Glow Orbs - Optimized */}
         <motion.div 
             animate={{ 
-                scale: [1, 1.2, 1],
-                opacity: [0.3, 0.5, 0.3],
-                x: [0, 50, 0],
-                y: [0, -30, 0]
+                opacity: [0.2, 0.4, 0.2],
             }}
-            transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-purple-900/20 rounded-full blur-[100px]"
+            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+            className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-purple-900/10 rounded-full blur-[120px]"
         />
         
         <motion.div 
             animate={{ 
-                scale: [1, 1.3, 1],
-                opacity: [0.2, 0.4, 0.2],
-                x: [0, -40, 0],
-                y: [0, 40, 0]
+                opacity: [0.1, 0.3, 0.1],
             }}
-            transition={{ duration: 15, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-            className="absolute bottom-[-10%] right-[-10%] w-[600px] h-[600px] bg-cyan-900/10 rounded-full blur-[120px]"
+            transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+            className="absolute bottom-[-10%] right-[-10%] w-[600px] h-[600px] bg-cyan-900/10 rounded-full blur-[150px]"
         />
 
-        {/* Floating Particles */}
+        {/* Floating Particles - Reduced Count */}
         <div className="absolute inset-0">
-            {[...Array(20)].map((_, i) => (
+            {[...Array(8)].map((_, i) => (
                 <motion.div
                     key={i}
-                    className="absolute w-1 h-1 bg-white/20 rounded-full"
+                    className="absolute w-1 h-1 bg-white/10 rounded-full"
                     initial={{
                         x: Math.random() * window.innerWidth,
                         y: Math.random() * window.innerHeight,
                     }}
                     animate={{
-                        y: [null, Math.random() * -100],
-                        opacity: [0, 0.5, 0]
+                        y: [null, Math.random() * -50],
+                        opacity: [0, 0.3, 0]
                     }}
                     transition={{
-                        duration: Math.random() * 5 + 5,
+                        duration: Math.random() * 10 + 10,
                         repeat: Infinity,
                         ease: "linear",
                         delay: Math.random() * 5
