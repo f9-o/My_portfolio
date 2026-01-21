@@ -30,7 +30,7 @@ const AboutSection = () => {
            <h2 className="text-3xl font-bold text-white mb-6 border-l-4 border-neon-cyan pl-4">ABOUT ME</h2>
            <div className="space-y-4 text-gray-300 leading-relaxed text-lg max-w-3xl">
               <p>
-                I’m Faisal Al-Nuaimany, known as <span className="text-neon-cyan font-bold">F9o</span>.
+                I’m Faisal Alnumani, known as <span className="text-neon-cyan font-bold">F9o</span>.
               </p>
               <p>
                 I build offensive security tools and DevOps-driven systems focused on attack simulation, infrastructure automation, and real-world adversary scenarios.

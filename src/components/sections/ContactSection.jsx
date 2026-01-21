@@ -30,7 +30,7 @@ const ContactSection = () => {
         </div>
         
         <div className="mt-12 text-xs text-gray-700 font-mono">
-           © 2026 FAISAL AL-NUAIMANY (F9O). ALL RIGHTS RESERVED.
+           © 2026 FAISAL ALNUMANI (F9O). ALL RIGHTS RESERVED.
         </div>
       </div>
     </section>

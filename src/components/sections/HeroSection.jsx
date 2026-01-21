@@ -21,7 +21,7 @@ const HeroSection = () => {
 
       <div className="z-10 max-w-4xl relative">
         <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 tracking-tight">
-          FAISAL AL-NUAIMANY
+          FAISAL ALNUMANI
         </h1>
         
         <p className="text-xl md:text-2xl text-neon-cyan font-mono mb-10 tracking-widest opacity-90">
